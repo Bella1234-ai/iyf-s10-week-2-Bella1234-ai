@@ -1,9 +1,9 @@
 # iyf-s10-week-2-Bella1234-ai
 transform your HTML portfolio into a beautifully styled, responsive website. By the end, your portfolio will look professional on any device.
-# Week {Number}: {Project Title}
+# Week 2: HTML portfolio
 
 ## Author
-- **Name:** Your Full Name
+- **Name:** ISABELLAH SIMIYU
 - **GitHub:** [@MaisoriKitayama](https://github.com/MaisoriKitayama)
 - **Date:** Month Day, Year
 
