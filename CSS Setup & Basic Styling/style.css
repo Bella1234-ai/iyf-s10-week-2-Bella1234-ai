@@ -1,0 +1,270 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #a7e9aa;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: rgb(196, 240, 1);
+  padding: 15px 40px;
+}
+/* Profile Image */
+.profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex: 0 0 auto; 
+} 
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #00adb5;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #00adb5, #007b83);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: #007b83;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #222;
+  color: white;
+}
+
+/* Projects Section */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+/* Gallery (CSS Grid) */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (min-width: 600px) {
+      .hero {
+        flex-direction: row;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #da0ba6;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+
+:root {
+  --header-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+
+  --primary-color: #3498db;
+  --text-color: #2c3e50;
+}
+
+/* 2. GLOBAL RESET (The "Pro Tip" fix) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* 3. LAYOUT STYLES */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: var(--font-4xl);
+  margin-bottom: 10px;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between cards */
+}
+
+/* 4. THE CARD COMPONENT (From Exercise 3) */
+.card {
+  width: 300px; /* Exact width as requested */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 20px; /* Exact padding as requested */
+}
+
+.card-title {
+  font-family: var(--header-font);
+  font-size: var(--font-2xl);
+  margin-bottom: 15px; /* Exact margin as requested */
+}
+
+.card-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--header-font);
+  font-size: var(--font-sm);
+  transition: opacity 0.2s;
+}
+
+.card-btn:hover {
+  opacity: 0.8;
+}
+
+.portfolio-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text-small {
+  font-size: var(--font-sm);
+  color: #7f8c8d;
+}
+
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--color-text);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Buttons (Using primary and hover variations) */
+.card-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Muted Text (Great for footers or timestamps) */
+.text-muted {
+  color: var(--color-muted);
+}

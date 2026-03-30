@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabellah Machio | Developer Portfolio</title>
+    <style>
+        /* 1. TYPE SCALE & VARIABLES */
+        :root {
+            --font-xs: 0.75rem;   
+            --font-sm: 0.875rem;  
+            --font-base: 1rem;   
+            --font-lg: 1.125rem;  
+            --font-xl: 1.25rem;   
+            --font-2xl: 1.5rem;   
+            --font-3xl: 1.875rem; 
+            --font-4xl: 2.25rem;  
+
+            --primary-blue: #110218;
+            --bg-dark: #370550;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        /* 2. GLOBAL STYLES */
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 3. HERO / ABOUT SECTION */
+        .intro-section {
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(190, 102, 102, 0.1);
+        }
+
+        .intro-section h1 {
+            font-size: var(--font-4xl);
+            margin: 10px 0;
+            color: var(--primary-blue);
+        }
+
+        .intro-section h3 {
+            font-size: var(--font-xl);
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .intro-section p {
+            font-size: var(--font-lg);
+            max-width: 700px;
+        }
+
+        /* 4. CONTACT SECTION */
+        .contact-section {
+            padding: 60px 0;
+        }
+
+        .contact-section h2 {
+            font-size: var(--font-3xl);
+            margin-bottom: 30px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(185, 51, 51, 0.733);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: var(--font-sm);
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #e7eaf0;
+            border: 1px solid #0c418b;
+            border-radius: 6px;
+            color: rgb(184, 160, 160);
+            font-size: var(--font-base);
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: var(--font-base);
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            background: #0a142c;
+            transform: translateY(-2px);
+        }
+
+        .status-msg {
+            margin-top: 20px;
+            font-size: var(--font-sm);
+            color: #04200e;
+            text-align: center;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="intro-section">
+            <p style="font-size: var(--font-lg); color: var(--text-muted);">Hello, I'm</p>
+            <h1>Isabellah Machio</h1>
+            <h3>Developer & Student at WE CAN ACADEMY</h3>
+            <p>
+                I am currently in my second month of pursuing a course in 
+                <strong>Computer Programming</strong>. I am passionate about technology 
+                and dedicated to solving complex problems through code.
+            </p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Find us on Social Media</h2>
+            <form id="contact-form" class="contact-card">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="email@example.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" required placeholder="How can I help?"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+                <div id="form-status" class="status-msg hidden">Success! Your message was sent.</div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        const form = document.querySelector("#contact-form");
+        const status = document.querySelector("#form-status");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            // Logic to show success
+            status.classList.remove("hidden");
+            form.reset();
+
+            // Hide after 4 seconds
+            setTimeout(() => {
+                status.classList.add("hidden");
+            }, 4000);
+        });
+    </script>
+</body>
+</html>

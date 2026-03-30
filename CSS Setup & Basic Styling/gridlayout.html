@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabellah Machio | Portfolio</title>
+    <style>
+        /* 1. COLOR SYSTEM (Task 3.4) & TYPE SCALE */
+        :root {
+            --color-primary: #2563eb;
+            --color-secondary: #f59e0b;
+            --color-background: #f8fafc;
+            --color-text: #0f172a;
+            --color-muted: #64748b;
+            
+            /* Type Scale */
+            --font-base: 1rem;
+            --font-lg: 1.125rem;
+            --font-3xl: 1.875rem;
+            --font-4xl: 2.25rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 2. BIO SECTION */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: var(--font-4xl);
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        /* 3. PROPORTIONAL GALLERY (Task 4.2) */
+        .gallery-title {
+            font-size: var(--font-3xl);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            /* 3 equal columns on desktop */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            /* Forces the container to be a perfect square */
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            /* 'cover' crops the image to fit without stretching */
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* 4. RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 2 columns on tablet */
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; } /* 1 column on mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="hero">
+            <h1>Isabellah Machio</h1>
+            <p style="font-size: var(--font-lg);">Developer | Student at WE CAN ACADEMY</p>
+            <p>I am passionate about technology and solving problems. Currently in my second month of Computer Programming, I am determined to master the skills needed for a successful career.</p>
+        </header>
+
+        <h2 class="gallery-title">My Projects</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Project 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Project 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159" alt="Project 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Project 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713" alt="Project 5">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" alt="Project 6">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+   <button>View Work</button><p>© 2026 Isabellah Machio. Built with ❤️ Contact Us on: 0728 664 134 Email: bellasimiyu44@yahoo.com</p>
+</footer>
+
+</body>
+</html>

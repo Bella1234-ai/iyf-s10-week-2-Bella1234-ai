@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Component</title>
+</head>
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+/* Card */
+.card{
+width:300px;              
+padding:20px;             
+border:1px solid gray;    
+background:white;
+box-sizing:border-box;
+}
+
+/* Image */
+.card img{
+width:100%;               
+display:block;
+}
+
+/* Title */
+.card h2{
+margin-bottom:15px;      
+}
+
+/* Description */
+.card p{
+margin-bottom:15px;
+}
+
+/* Button */
+.card button{
+width:100%;
+padding:10px;
+border:none;
+background:black;
+color:white;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#333;
+}
+</style>
+
+<body>
+
+<div class="card">
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240125180753/Screenshot-2024-01-25-125829.jpg" alt="Card Image">
+
+<div class="card-content">
+<h2>Card Title</h2>
+
+<p>
+This is a simple description text inside the card. It explains
+what the card is about.
+</p>
+
+<button>Read More</button>
+</div>
+
+</div>
+
+</body>
+</html>

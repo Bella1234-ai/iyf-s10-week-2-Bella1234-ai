@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Practice</title>
+
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+            background-color: #b98686;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px; /* space between boxes */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+        }
+
+        /* 1. CONTENT */
+        .content-box {
+            background-color: lightblue;
+        }
+
+        /* 2. PADDING */
+        .padding-box {
+            background-color: lightgreen;
+            padding: 30px; /* increases inner space */
+            line-height: normal;
+        }
+
+        /* 3. BORDER */
+        .border-box {
+            background-color: lightcoral;
+            border: 5px solid black; /* visible border */
+        }
+
+        /* 4. MARGIN */
+        .margin-box {
+            background-color: lightgoldenrodyellow;
+            margin: 40px; /* space outside the box */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Box Model Visualization</h1>
+
+    <div class="container">
+        <div class="box content-box">Content</div>
+        <div class="box padding-box">Padding</div>
+        <div class="box border-box">Border</div>
+        <div class="box margin-box">Margin</div>
+    </div>
+
+</body>
+</html>

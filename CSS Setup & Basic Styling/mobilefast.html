@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabellah Machio | Developer Portfolio</title>
+    <style>
+        /* 1. COLOR SCHEME & TYPE SCALE (Task 3.4 & Exercise 2) */
+        :root {
+            --color-primary: #2563eb;
+            --color-secondary: #f59e0b;
+            --color-background: #cfdeec;
+            --color-text: #0f172a;
+            --color-muted: #64748b;
+            --color-white: #ecc1c1;
+
+            /* Type Scale */
+            --font-xs: 0.75rem;   /* 12px */
+            --font-sm: 0.875rem;  /* 14px */
+            --font-base: 1rem;    /* 16px */
+            --font-lg: 1.125rem;  /* 18px */
+            --font-xl: 1.25rem;   /* 20px */
+            --font-2xl: 1.5rem;   /* 24px */
+            --font-3xl: 1.875rem; /* 30px */
+            --font-4xl: 2.25rem;  /* 36px */
+        }
+
+        /* 2. MOBILE-FIRST BASE STYLES (Task 4.3) */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* Navigation: Mobile Hamburger Style (Basic) */
+        nav {
+            background: var(--color-white);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: none; /* Hidden on mobile by default */
+            list-style: none;
+            gap: 15px;
+        }
+
+        /* Home Page: Mobile Single Column */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .hero h1 { font-size: var(--font-3xl); color: var(--color-primary); }
+
+        /* Projects Page: Mobile 1 Column of Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--color-white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            aspect-ratio: 1 / 1; /* Proportional Gallery Style */
+        }
+
+        /* Contact Page: Mobile Full-Width Form */
+        .contact-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid var(--color-muted);
+            border-radius: 4px;
+        }
+
+        /* 3. RESPONSIVE BREAKPOINTS (Task 4.3) */
+
+        /* Tablet (min-width: 768px) */
+        @media (min-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            }
+            .hero h1 { font-size: var(--font-4xl); }
+        }
+
+        /* Desktop (min-width: 1024px) */
+        @media (min-width: 1024px) {
+            nav .nav-links {
+                display: flex; /* Horizontal menu on desktop */
+            }
+            .project-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            }
+            .hero {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                gap: 50px;
+            }
+            .contact-wrapper {
+                display: flex;
+                gap: 40px; /* Form with sidebar on desktop */
+            }
+            .contact-sidebar { width: 30%; }
+            .contact-form { width: 70%; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="logo" style="font-size: var(--font-xl); font-weight: bold;">IM.DEV</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Isabellah Machio</h1>
+                <p>Developer | Student at WE CAN ACADEMY</p>
+                <p class="hero-text">Passionate about solving problems and mastering the art of programming.</p>
+            </div>
+            <div class="hero-image" style="background: #e2e8f0; height: 200px; width: 100%; border-radius: 12px;">
+                <p style="text-align: center; padding-top: 80px; color: var(--color-muted);">[Hero Image Placeholder]</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 style="font-size: var(--font-2xl);">My Projects</h2>
+            <div class="project-grid">
+                <article class="card"><h3>Project 1</h3><p>weather forecast app</p></article>
+                <article class="card"><h3>Project 2</h3><p>calculator module</p></article>
+                <article class="card"><h3>Project 3</h3><p>Todo list application</p></article
+        </section>
+
+        <section id="contact" style="margin-top: 50px;">
+            <h2 style="font-size: var(--font-2xl);">Get in Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-sidebar">
+                    <p>Located in Nairobi, Kenya. Currently available for collaborations.</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" style="background: var(--color-primary); color: white; border: none; padding: 15px; border-radius: 4px; cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        /* DOM NAVIGATION PRACTICE (Based on Exercise Image) */
+
+        // 1. Select the header (nav), then navigate up to the parent (body)
+        const nav = document.querySelector("nav");
+        console.log("Parent of Nav:", nav.parentElement); //
+
+        // 2. Select the first nav-link, then get its parent (li)
+        const firstLink = document.querySelector(".nav-link");
+        console.log("Link Parent:", firstLink.parentElement); //
+
+        // 3. Select the article, then get its next sibling (section)
+        const article = document.querySelector("article");
+        console.log("Next Sibling:", article.nextElementSibling); //
+
+        // 4. Change Text Content (Exercise 1)
+        const heroText = document.querySelector(".hero-text");
+        heroText.textContent = "I am a determined hard worker ready for my future career!"; // Includes hidden text
+    </script>
+</body>
+</html>

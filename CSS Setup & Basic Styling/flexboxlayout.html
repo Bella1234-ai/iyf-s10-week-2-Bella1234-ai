@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabellah Machio | Portfolio</title>
+    <style>
+        /* 1. COLOR SYSTEM & TYPE SCALE (From your Tasks) */
+        :root {
+            --color-primary: #2563eb;
+            --color-secondary: #f59e0b;
+            --color-background: #cd5be9;
+            --color-text: #0f307c;
+            --color-muted: #64748b;
+            --white: #e6d2d2;
+
+            /* Type Scale */
+            --font-sm: 0.875rem;
+            --font-base: 1rem;
+            --font-lg: 1.125rem;
+            --font-xl: 1.25rem;
+            --font-4xl: 2.25rem;
+        }
+
+        /* 2. GLOBAL RESET */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* 3. FLEXBOX NAV BAR (Exercise 1) */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* 4. HERO SECTION */
+        .hero {
+            padding: 100px 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+        }
+
+        .hero h1 {
+            font-size: var(--font-4xl);
+            color: var(--color-primary);
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: var(--font-xl);
+            color: var(--color-muted);
+        }
+
+        /* 5. FLEXBOX CARD ROW (Exercise 2) */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px 10%;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1 1 250px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--color-secondary);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+
+        /* 6. FOOTER LAYOUT (Exercise 3) */
+        footer {
+            background: var(--color-text);
+            color: var(--white);
+            padding: 60px 10% 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            font-size: var(--font-sm);
+            color: var(--color-muted);
+        }
+
+        /* Responsive Fix for small screens */
+        @media (max-width: 600px) {
+            nav { flex-direction: column; gap: 15px; }
+            .hero { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>Bella</strong>@ Developer</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="about">
+        <h1>Isabellah Machio</h1>
+        <p>Computer Programming Student @ WE CAN ACADEMY</p>
+        <div style="max-width: 600px; margin: 20px auto;">
+            I am a passionate developer in my second month of study. 
+            I am determined to succeed, solve problems, and build a 
+            meaningful career in tech.
+        </div>
+    </header>
+
+    <section class="card-container" id="projects">
+        <div class="card">
+            <h3>Hard Worker</h3>
+            <p>Committed to mastering programming fundamentals and directory architectures.</p>
+        </div>
+        <div class="card">
+            <h3>Tech Enthusiast</h3>
+            <p>Passionate about how code can solve real-world distribution and supply problems.</p>
+        </div>
+        <div class="card">
+            <h3>Determined</h3>
+            <p>Focused on continuous learning and solving complex logic puzzles.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Contact me on: </h4>
+                <p>Email: bellasimiyu44@yahoo.com</p>
+                <p>Phone: +254 728 664 134</p>
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+            <div>
+                <h4>Learning</h4>
+                <p>HTML, CSS, Terminal, JS</p>
+            </div>
+            <div>
+                <h4>Follow</h4>
+                <p>GitHub | LinkedIn | Twitter| Facebook</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Isabellah Machio. Created with modern CSS Flexbox.
+        </div>
+    </footer>
+
+</body>
+</html>
