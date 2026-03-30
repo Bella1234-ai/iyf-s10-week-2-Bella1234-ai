@@ -111,11 +111,11 @@ Uses:
 
 Using **HTML5 elements:
 
-- <header>
-- <main>
-- <section>
-- <article>
-- <footer>
+ <header>
+ <main>
+ <section>
+ <article>
+ <footer>
 
 Improves:
 Accessibility
