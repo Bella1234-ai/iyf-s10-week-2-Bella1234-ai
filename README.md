@@ -286,7 +286,7 @@ Would you like me to explain the difference between align-items and align-conten
 ![Screenshot description](path/to/screenshot.png)
 
 ## Live Demo (if deployed)
-[View Live Demo](https://your-deployed-url.com)
+[View Live Demo][(https://your-deployed-url.com)](https://github.com/Bella1234-ai/iyf-s10-week-2-)
 
 ## Exercise 2: Debug the Layout Fix this broken CSS (the boxes should be 300px wide total):
 /* This box ends up 340px wide - why? Fix it! */
