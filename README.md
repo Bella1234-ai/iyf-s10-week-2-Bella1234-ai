@@ -5,8 +5,7 @@ transform your HTML portfolio into a beautifully styled, responsive website. By 
 ## Author
 - **Name:** ISABELLAH SIMIYU
 - **GitHub:** [@bella1234-ai](https://github.com/bella1234-ai)
-- **Date:** Month Day, Year
-
+- **Date:** 03 31, 2026
 ## Project Description
 Multi-page portfolio (index.html, about.html, projects.html, contact.html) Contact form with proper validation attributes to show my skilss in Programming
 
