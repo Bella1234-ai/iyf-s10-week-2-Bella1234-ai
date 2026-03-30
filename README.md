@@ -4,7 +4,7 @@ transform your HTML portfolio into a beautifully styled, responsive website. By 
 
 ## Author
 - **Name:** ISABELLAH SIMIYU
-- **GitHub:** [@MaisoriKitayama](https://github.com/MaisoriKitayama)
+- **GitHub:** [@bella1234-ai](https://github.com/bella1234-ai)
 - **Date:** Month Day, Year
 
 ## Project Description
